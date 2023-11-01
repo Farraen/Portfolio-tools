@@ -76,14 +76,19 @@ thisdict = {
   65: "svm_1",
   66: "track_1",
   67: "mvc_1",
+  68: "ga_pu_1",
 }
 
 
 
 
 for i in range(slide_count):
-    print(i)
+
+  try:
     Presentation.Slides[i].Export(path + '\\images\\' + thisdict[i+1] + '.png', "PNG")
+    print(i)
+  except:
+    print("An exception occurred")
 
 #Presentation.Slides[i].Export(path + '\\images\\image_' + str(i) + '.png', "PNG")
 
